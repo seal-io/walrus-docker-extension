@@ -1,5 +1,5 @@
 IMAGE?=sealio/walrus-docker-extension
-TAG?=latest
+TAG?=main
 
 BUILDER=buildx-multi-arch
 
