@@ -8,6 +8,5 @@ services:
     command: ["walrus", "--enable-authn=false"]
     environment:
       - SERVER_SETTING_LOCAL_ENVIRONMENT_MODE=docker
-      - SERVER_SETTING_SERVE_URL=https://host.docker.internal:7443
     volumes:
       - /var/run/docker.sock.raw:/var/run/docker.sock
