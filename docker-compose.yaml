@@ -8,5 +8,7 @@ services:
     command: ["walrus", "--enable-authn=false"]
     environment:
       - SERVER_SETTING_LOCAL_ENVIRONMENT_MODE=docker
+      # avoid the impact from docker embedded DNS server.
+      - K3S_RESOLV_CONF=
     volumes:
       - /var/run/docker.sock.raw:/var/run/docker.sock
