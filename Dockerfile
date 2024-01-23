@@ -27,3 +27,7 @@ COPY docker-compose.yaml .
 COPY metadata.json .
 COPY walrus.svg .
 COPY --from=client-builder /ui/build ui
+
+ARG TAG
+ENV TAG=${TAG}
+RUN sed -i'' -e "s/WALRUS_TAG/${TAG}/g" docker-compose.yaml

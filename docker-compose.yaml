@@ -1,6 +1,6 @@
 services:
   walrus:
-    image: sealio/walrus:main
+    image: sealio/walrus:WALRUS_TAG
     privileged: true
     ports:
       - "7080:80"
